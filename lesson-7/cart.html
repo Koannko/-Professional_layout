@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav__list">
+                <li class="nav__left">
+                    <div class="nav__item"><img src="images/Logo.svg" alt="Logo"></div>
+                    <div class="nav__item"><img src="images/Search.svg" alt="Search"></div>
+                </li>
+                <li class="nav__right">
+                    <div class="nav__item"><img src="images/Menu.svg" alt="nav"></div>
+                    <div class="nav__item"><img src="images/Personal.svg" alt="Personal"></div>
+                    <div class="nav__item"><img src="images/Basket.svg" alt="Basket"></div>   
+                </li>
+            </ul>
+        </nav>
+        <div class="breadcrump__block">
+            <div class="container breadcrump__block cart-top">
+                <div class="breadcrump__heading cart-top">SHOPPING CART</div>
+            </div>
+        </div>
+    </header>
+    <div class="container cart-grid">
+        <div class="good-card good-card-first">
+            <div class="good-cart-top">
+                <div class="good-card-heading">MANGO  PEOPLE  T&#8209;SHIRT</div>
+                <div class="cart-delete"><img src="images/cart-delete.svg" alt="cart-delete"></div>
+            </div>
+            <div class="good-card-property">Price: <span class="good-card-price good-card-value">$300</span></div> 
+            <div class="good-card-property">Color: <span class="good-card-value">Red</span></div> 
+            <div class="good-card-property">Size: <span class="good-card-value">Xl</span></div>
+            <div class="good-card-property">Quantity:	<span class="good-card-quantify good-card-value">2</span></div> 
+        </div>
+        <div class="good-card good-card-second">
+            <div class="good-cart-top">
+                <div class="good-card-heading">MANGO  PEOPLE  T&#8209;SHIRT</div>
+                <div class="cart-delete"><img src="images/cart-delete.svg" alt="cart-delete"></div>
+            </div>
+            <div class="good-card-property">Price: <span class="good-card-price good-card-value">$300</span></div> 
+            <div class="good-card-property">Color: <span class="good-card-value">Red</span></div> 
+            <div class="good-card-property">Size: <span class="good-card-value">Xl</span></div>
+            <div class="good-card-property">Quantity:	<span class="good-card-quantify good-card-value">2</span></div> 
+        </div>
+        <form action="/people" class="shipping-address-form">
+            <div class="heading-form subscribe__form_email">SHIPPING ADRESS</div>
+            <input class="input-address-form subscribe__form_email input-city-form" type="text" placeholder="Bangladesh">
+            <input class="input-address-form subscribe__form_email" type="text" placeholder="State">
+            <input class="input-address-form subscribe__form_email" type="text" placeholder="Postcode / Zip">
+            <button class="input-address-form button-address-form subscribe__form_email">Get a quote</button>
+        </form>
+        <div class="purchase-cost">
+            <div class="sub-total">SUB TOTAL         $900</div>
+            <div class="grand-total">GRAND TOTAL      $900</div>
+            <hr class="purchase-rule">
+            <div class="buy-button">PROCEED TO CHECKOUT</div>
+        </div>    
+        <div class="cart-function">
+            <div class="cart-function-button cart-function-button-margin">CLEAR SHOPPING CART</div>
+            <div class="cart-function-button">CONTINUE SHOPPING</div>
+        </div>
+    </div>
+    <div class="subscribes_back margin-card">
+        <div class="subscribes">
+            <div class="subscribes__reveiw">
+                <img src="images/subscribe_reviewer.png" alt="subscribes__reveiwer">
+                <div class="subscribes_quote">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</div>
+            </div>
+            <div class="subscribe_us">
+                <div class="subscribes_heading">SUBSCRIBE</div>
+                <div class="subscribes_explanation">FOR OUR NEWLETTER AND PROMOTION</div>
+                <div class="subscribe_block">
+                    <form action="" id="form_subscribe">
+                        <input type="email" class="subscribe__form_email" placeholder="Enter Your Email"></input>
+                    </form>
+                    <button class="subscribe__form_button" type="submit" form="form_subscribe" value="Submit">Submit</button>
+
+                </div>                
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer__copy">&copy; 2021  Brand  All Rights Reserved.</div>
+        <div class="footer__links">
+            <div class="footer__icons">
+                <img src="images/icons_facebook.svg" alt="icons_facebook">
+            </div>
+            <div class="footer__icons" style="background-color: #F16D7F">
+                <img src="images/icons_instagram.svg" alt="icons_instagram">
+            </div>
+            <div class="footer__icons">
+                <img src="images/icons_pinterest.svg" alt="icons_pinterest">
+            </div>
+            <div class="footer__icons">
+                <img src="images/icons_twitter.svg" alt="icons_twitter">
+            </div>
+       </div>
+    </footer>
+</body>
+</html>
