@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav__list">
+                <li class="nav__left">
+                    <div class="nav__item"><img src="images/Logo.svg" alt="Logo"></div>
+                    <div class="nav__item"><img src="images/Search.svg" alt="Search"></div>
+                </li>
+                <li class="nav__right">
+                    <div class="nav__item"><img src="images/Menu.svg" alt="nav"></div>
+                    <div class="nav__item"><img src="images/Personal.svg" alt="Personal"></div>
+                    <div class="nav__item"><img src="images/Basket.svg" alt="Basket"></div>   
+                </li>
+            </ul>
+        </nav>
+        <div class="breadcrump__block">
+            <div class="container breadcrump__block cart-top">
+                <div class="breadcrump__heading cart-top">REGISTRATION</div>
+            </div>
+        </div>
+    </header>
+    <div class="container registration-block">
+    <form action="/people" class="shipping-address-form registration-form">
+        <div class="heading-form subscribe__form_email">Your Name</div>
+        <input class="input-address-form subscribe__form_email" type="text" placeholder="First Name">
+        <input class="input-address-form subscribe__form_email" type="text" placeholder="Last Name">
+        <div class="gender">
+            <input type="radio" id="gender" class="no-margin-left" name="gender" value="male" checked>
+            <label for="gender">Male</label>
+            <input type="radio" id="gender" name="gender" value="female">
+            <label for="gender">Female</label>
+            <input type="radio" id="gender" name="gender" value="other">
+            <label for="gender">Other</label>
+        </div>
+        <div class="heading-form subscribe__form_email">Login details</div>
+        <input class="input-address-form subscribe__form_email" type="email" placeholder="Email">
+        <input class="input-address-form subscribe__form_email" type="password" placeholder="Password">
+        <div class="subscribe__form_email password-description">Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</div>
+        <button class="button-registration">
+            <div class="text-button-registration">
+                JOIN NOW
+            </div>
+            <img src="images/button_arrow.svg" alt="#">
+        </button>
+    </form>
+
+    <div class="advantages-registration">
+        <div class="advantages-heading-registration">LOYALTY HAS ITS PERKS</div>
+        <div>Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:</div>
+            <ul class="advantages-list">
+            <li class="advantages-item">15% off welcome offer</li>
+            <li class="advantages-item">Free shipping, returns and exchanges on all orders</li>
+            <li class="advantages-item">$10 off a purchase on your birthday</li>
+            <li class="advantages-item">Early access to products</li>
+            <li class="advantages-item">Exclusive offers & rewards</li>
+        </ul>
+    </div>
+</div>
+    <div class="subscribes_back margin-card">
+        <div class="subscribes">
+            <div class="subscribes__reveiw">
+                <img src="images/subscribe_reviewer.png" alt="subscribes__reveiwer">
+                <div class="subscribes_quote">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</div>
+            </div>
+            <div class="subscribe_us">
+                <div class="subscribes_heading">SUBSCRIBE</div>
+                <div class="subscribes_explanation">FOR OUR NEWLETTER AND PROMOTION</div>
+                <div class="subscribe_block">
+                    <form action="" id="form_subscribe">
+                        <input type="email" class="subscribe__form_email" placeholder="Enter Your Email"></input>
+                    </form>
+                    <button class="subscribe__form_button" type="submit" form="form_subscribe" value="Submit">Submit</button>
+
+                </div>                
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer__copy">&copy; 2021  Brand  All Rights Reserved.</div>
+        <div class="footer__links">
+            <div class="footer__icons">
+                <img src="images/icons_facebook.svg" alt="icons_facebook">
+            </div>
+            <div class="footer__icons" style="background-color: #F16D7F">
+                <img src="images/icons_instagram.svg" alt="icons_instagram">
+            </div>
+            <div class="footer__icons">
+                <img src="images/icons_pinterest.svg" alt="icons_pinterest">
+            </div>
+            <div class="footer__icons">
+                <img src="images/icons_twitter.svg" alt="icons_twitter">
+            </div>
+       </div>
+    </footer>
+</body>
+</html>
