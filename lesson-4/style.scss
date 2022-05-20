@@ -27,14 +27,83 @@ nav {
     display: flex;
     justify-content: space-between;
 }
+
 .nav__item {
     display: flex;
     align-self: center;
     margin: 0 20px;
+    position: relative;
+}
+
+.cart__products_count {
+    position: absolute;
+    background: #F16D7F;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    left: 25px;
+}
+
+.rightHeader {
+    position: relative;
+}
+
+.basket {
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    top: 37px;
+    background: white;
+    padding: 10px;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 340px) {
+    .basket {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 552px) {
+    .basket {
+        width: 500px;
+    }
+}
+
+.basketRow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 10px;
+}
+
+.basketHeader {
+    font-weight: bold;
+}
+
+.basketTotal {
+    font-weight: bold;
+    text-align: right;
+}
+
+.productsCount {
+    font-family: Lato;
+    font-size: 13px;
+    line-height: 19px;
+    color: #ffffff;
+    text-align: center;
 }
 
 .breadcrump__block {
-    background-color: #F8F3F4; 
+    background-color: #F8F3F4;
     height: 148px;
     display: flex;
     align-items: center;
@@ -55,8 +124,8 @@ nav {
     display: flex;
     padding-left: 0px;
     margin: 0;
-  }
-  
+}
+
 .breadcrumb-item {
     font-family: Lato;
     font-weight: 300;
@@ -67,13 +136,13 @@ nav {
     text-transform: uppercase;
     text-decoration: none;
 }
-    
+
 .breadcrumb-item_active {
     font-weight: normal;
     color: #F16D7F;
 }
- 
-.breadcrumb-item + .breadcrumb-item::before {
+
+.breadcrumb-item+.breadcrumb-item::before {
     display: inline-block;
     padding-right: 0.5rem;
     color: #6c757d;
@@ -86,7 +155,7 @@ nav {
     width: 670px;
     margin: 51px 0 65px;
 
-    
+
 }
 
 .filter_left {
@@ -143,6 +212,40 @@ article {
     margin-top: 65px;
 }
 
+.featuredImgDark {
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    width: 100%;
+    background-color: #222222;
+    opacity: 0.5;
+    display: none;
+    padding-top: calc(80%);
+}
+
+.card-button {
+    width: 211px;
+    height: 47px;
+    border: 1px solid #FF6A6A;
+    background: none;
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F26376;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 24px;
+    padding-right: 33px;
+    margin-bottom: 65px;
+    display: flex;
+}
+
+.button-text {
+    margin-left: 13px;
+}
+
 .for_women {
     grid-area: for_women;
     position: relative;
@@ -185,8 +288,8 @@ article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: "for_women for_men for_kids" 
-                "accesories accesories accesories";
+    grid-template-areas: "for_women for_men for_kids"
+        "accesories accesories accesories";
     grid-gap: 30px;
 
 }
@@ -258,6 +361,7 @@ main {
 
 .main__card {
     background-color: #F8F8F8;
+    position: relative;
 }
 
 .main__card_header {
@@ -265,7 +369,7 @@ main {
     font-size: 13px;
     line-height: 16px;
     color: #000000;
-    margin-top: 25px ;
+    margin-top: 25px;
     margin-left: 18px;
     text-transform: uppercase;
 }
@@ -314,7 +418,7 @@ main {
     align-items: center;
     margin-bottom: 96px;
     padding: 0 15px;
-    
+
 }
 
 .page {
@@ -346,7 +450,7 @@ main {
         justify-content: space-between;
         padding-left: 22px;
         padding-right: 22px;
-        
+
     }
 
     .advantages_heading {
@@ -363,11 +467,11 @@ main {
     }
 }
 
-.subscribes_back {    
+.subscribes_back {
     background-image: url(images/subscribe_back.png);
 }
 
-.subscribes {    
+.subscribes {
     background: rgba(244, 244, 244, 0.7);
     display: flex;
     align-items: center;
@@ -418,7 +522,7 @@ main {
             }
 
             .subscribe__form_button {
-                width: 100px; 
+                width: 100px;
                 height: 49px;
                 background-color: #F16D7F;
                 border: none;
@@ -462,7 +566,7 @@ footer {
     }
 }
 
-@media (min-width: 1600px) {   
+@media (min-width: 1600px) {
     .container {
         width: 1140px;
     }
@@ -513,12 +617,12 @@ footer {
         height: 168px;
         width: 232px;
     }
-    
+
     .for_men {
         height: 168px;
         width: 232px;
     }
-    
+
     .for_kids {
         height: 168px;
         width: 232px;
@@ -533,17 +637,17 @@ footer {
         margin-left: 40px;
         margin-top: 59px;
     }
-    
+
     .item__for_men {
         margin-left: 61px;
         margin-top: 59px;
     }
-    
+
     .item__for_kids {
         margin-left: 59px;
         margin-top: 59px;
     }
-    
+
     .item__accesories {
         margin-left: 284px;
         margin-top: 39px;
@@ -565,7 +669,7 @@ footer {
     .main__heading {
         margin-bottom: 3px;
     }
-    
+
     .main__paragraph {
         margin-bottom: 74px;
     }
@@ -576,9 +680,9 @@ footer {
         grid-gap: 18px 16px;
         margin-bottom: 33px;
     }
-    
+
     .main__card_header {
-        margin-top: 24px ;
+        margin-top: 24px;
     }
 
     .main__button {
@@ -661,7 +765,7 @@ footer {
     }
 
     .top {
-        height: 363px;        
+        height: 363px;
         margin: 0;
     }
 
@@ -690,12 +794,12 @@ footer {
         height: 247px;
         width: 343px;
     }
-    
+
     .for_men {
         height: 247px;
         width: 343px;
     }
-    
+
     .for_kids {
         height: 247px;
         width: 343px;
@@ -703,24 +807,24 @@ footer {
 
     .accesories {
         width: 343px;
-        height: 111px; 
+        height: 111px;
     }
 
     .item__for_women {
         margin-left: 94px;
         margin-top: 95px;
     }
-    
+
     .item__for_men {
         margin-left: 120px;
         margin-top: 102px;
     }
-    
+
     .item__for_kids {
         margin-left: 112px;
         margin-top: 105px;
     }
-    
+
     .item__accesories {
         margin-left: 88px;
         margin-top: 35px;
@@ -738,9 +842,9 @@ footer {
     }
 
     .main__card_header {
-        margin-top: 23px ;
+        margin-top: 23px;
     }
-    
+
     .main__button {
         margin-bottom: 97px;
     }
@@ -776,9 +880,9 @@ footer {
 
             .subscribes_heading {
                 line-height: 37px;
-    
+
             }
-    
+
             .subscribes_explanation {
                 font-size: 14px;
                 line-height: 21px;
@@ -791,7 +895,7 @@ footer {
         height: 143px;
         flex-direction: column-reverse;
         justify-content: start;
-    
+
         .footer__copy {
             padding-right: 0;
             padding-top: 40px;
