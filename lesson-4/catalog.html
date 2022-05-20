@@ -76,7 +76,7 @@
     </div>
     <main class="container main_catalog">
         <div class="main__list">
-            <div class="main__card" data-id="1Product 0" data-price="52.20">
+            <div class="main__card" data-id="1" data-name="Product 0" data-price="35.90">
                 <img src="images/main_bags.png" alt="main_bags">
                 <div class="featuredImgDark">
                     <button class="card-button">
@@ -84,7 +84,7 @@
                         <div class="button-text">Add to Cart</div>
                     </button>
                 </div>
-                <div class="main__card_header" data-id="1" data-name="Product 0" data-price="35.90">Product 0</div>
+                <div class="main__card_header">Product 0</div>
                 <div class="main__card_description">Known for her sculptural takes on traditional tailoring, Australian
                     arbiter of cool Kym Ellery teams up with Moda Operandi.</div>
                 <div class="item_description main__card_price">$52.00</div>
@@ -274,3 +274,15 @@
 </body>
 
 </html>
+<div class="basketRow" data-product="${productId}">
+    <div>${basket[productId].name}</div>
+    <div>
+        <span class="productCount">${basket[productId].count}</span>
+    </div>
+    <div>$${basket[productId].price}</div>
+    <div>
+        $<span class="productTotalRow">
+            ${(basket[productId].price * [productId]).count}
+        </span>
+    </div>
+</div>

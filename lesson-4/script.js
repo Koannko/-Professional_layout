@@ -7,34 +7,76 @@
 */
 "use strict"
 
-let productsCount = 0;
-document.querySelector('.productsCount').textContent = productsCount;
-
+const basketEl = document.querySelector('.cart_button');
+const basketTotalValueEl = document.querySelector('.basketTotalValue');
+const basketCountEl = document.querySelector('.productsCount');
+const purchasesList = document.querySelector('.basket');
 const cardEl = document.querySelector('.main__card');
+const basket = {};
+const basketTotalValue = document.querySelector('.basketTotalValue');
+
+let productsCount = 0;
+basketCountEl.textContent = productsCount;
+
 document.querySelectorAll('.main__card_price').forEach(el => {
-    el.textContent = `$${cardEl.dataset.price}`
+    el.textContent = `$${el.parentElement.dataset.price}`;
 });
 
-const basketEl = document.querySelector('.cart_button');
-const purchasesList = document.querySelector('.basket');
-basketEl.addEventListener('click', event => {
+
+basketEl.addEventListener('click', () => {
     purchasesList.classList.toggle('hidden');
 })
 
-const basket = {};
-const basketTotalValue = document.querySelector('.basketTotalValue');
 function addToCart(id, name, price) {
     if (!(id in basket)) {
         basket[id] = { id, name, price, count: 0 };
     }
     basket[id].count++;
-    document.querySelector('.productsCount').textContent = productsCount;
+    console.log(basket[id].count)
+    basketCountEl.textContent = getBasketTotalCount();
     basketTotalValue.textContent = getBasketTotalValue().toFixed(2);
+    renderProductInBasket(id);
 }
 
 function getBasketTotalValue() {
-    console.log(Object.values(basket))
-    return Object.values(basket).reduce((acc, product) => acc + product.count * product.price, 0);
+    return Object.values(basket).
+        reduce((acc, product) => acc + product.count * product.price, 0);
+}
+
+function getBasketTotalCount() {
+    return Object.values(basket)
+        .reduce((acc, product) => acc + product.count, 0);
+}
+
+function renderProductInBasket(id) {
+    const basketRowEl = purchasesList.querySelector(`.basketRow[data-productId="${id}"]`);
+    console.log(purchasesList.querySelector('.basketRow'));
+    if (!basketRowEl) {
+        renderNewProductInBasket(id);
+        return;
+    }
+    console.log('hey')
+    basketRowEl.querySelector('.productCount').textContent = basket[id].count;
+    basketRowEl.querySelector('.productTotalRow').textContent = (basket[id].count * basket[id].price).toFixed(2);
+    return;
+}
+
+function renderNewProductInBasket(productId) {
+    const productRow = `
+    <div class="basketRow" data-productId="${productId}">
+        <div>${basket[productId].name}</div>
+        <div>
+            <span class="productCount">${basket[productId].count}</span>
+        </div>
+        <div>$${basket[productId].price}</div>
+        <div>
+            $<span class="productTotalRow">
+                ${(basket[productId].price * basket[productId].count)}
+            </span>
+        </div>
+    </div>
+    `;
+    purchasesList.querySelector('.basketRow').insertAdjacentHTML('afterend', productRow);
 }
 
 console.log(document.querySelectorAll('.main__card'));
@@ -65,7 +107,7 @@ document.querySelectorAll('.card-button').forEach(btn => {
         const id = +addedProduct.dataset.id;
         const name = addedProduct.dataset.name;
         const price = +addedProduct.dataset.price;
-        console.log(id, name, price);
+        addToCart(id, name, price);
     });
 });
 
